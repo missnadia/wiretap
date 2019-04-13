@@ -50,7 +50,8 @@ class Api::ContactsController < ApplicationController
             :home,
             :fax,
             :home_address,
-            :work_address
+            :work_address,
+            :img
         )
     end
 end

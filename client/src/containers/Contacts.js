@@ -1,21 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
+import ContactCard from '../components/ContactCard'
+import ContactForm from './ContactForm'
 import './Contacts.css'
 
-const Contacts = (props) => (
-    <div className="ContactsContainer">
-        <h1>Contacts</h1>
-        {props.contacts.map(contact =>
-            <div key={contact.id} className="ContactCard">
-                <div className="ContactCardImg">
-                    <img src={contact.img} alt={contact.name} />
-                </div>
-                <h3 className="ContactName">{contact.first_name} {contact.last_name}</h3>
+export default class Contacts extends Component {
+
+    render() {
+        return (
+            <div className="ContactsContainer">
+                <h1>Contacts</h1>
+                {this.props.contacts.map(contact =>
+                    <ContactCard key={contact.id} contact={contact} />
+                )}
+                <ContactForm />
             </div>
-        )}
-    </div>
-)
-
-
-
-
-export default Contacts
+        )
+    }
+}

@@ -1,0 +1,48 @@
+body {
+    background-color: #D2DBDD;
+}
+
+.ContactsContainer {
+    padding: 16px
+}
+
+.ContactCard {
+    float: left;
+    margin: 20px 10px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.ContactCard:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+h3.ContactName {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -50px;
+    height: 40px;
+    text-shadow: white 0px 0px 10px;
+}
+
+.ContactCardImg {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+}
+
+.ContactCardImg img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+}

@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 import ContactCard from '../components/ContactCard'
 import ContactForm from './ContactForm'
+import { getContacts } from '../actions/contacts'
 import './Contacts.css'
 
-export default class Contacts extends Component {
+class Contacts extends Component {
+
+    componentDidMount() {
+        this.props.getContacts()
+    }
 
     render() {
         return (
@@ -17,3 +24,11 @@ export default class Contacts extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return ({
+        contacts: state.contacts
+    })
+}
+
+export default connect(mapStateToProps, { getContacts })(Contacts)

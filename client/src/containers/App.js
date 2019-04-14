@@ -1,15 +1,30 @@
 import React, { Component } from 'react'
+import Contacts from './Contacts'
 import './App.css'
 
-class App extends Component {
+const API_URL = '/api/contacts'
+
+export default class App extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            contacts: []
+        }
+    }
+
+    componentDidMount() {
+        fetch(API_URL)
+            .then(response => response.json())
+            .then(contacts => this.setState({ contacts }))
+    }
 
     render() {
         return (
-            <div>
-                App Container
+            <div className="App">
+                <Contacts contacts={this.state.contacts} />
             </div>
         )
     }
 }
-
-export default App;

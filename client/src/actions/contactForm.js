@@ -1,4 +1,4 @@
-// Action Creator
+// Action Creators
 export const updateContactFormData = contactFormData => {
     return {
         type: 'UPDATED_CONTACT',

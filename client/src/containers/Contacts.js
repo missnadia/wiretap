@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 import ContactCard from '../components/ContactCard'
-import ContactForm from './ContactForm'
 import { getContacts } from '../actions/contacts'
 import './Contacts.css'
 
@@ -19,7 +17,6 @@ class Contacts extends Component {
                 {this.props.contacts.map(contact =>
                     <ContactCard key={contact.id} contact={contact} />
                 )}
-                <ContactForm />
             </div>
         )
     }

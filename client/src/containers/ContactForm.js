@@ -34,10 +34,10 @@ class ContactForm extends Component {
 
         return (
             <div>
-                Add New Contact
+                <h2>Add New Contact</h2>
                 <form onSubmit={this.handleOnSubmit}>
                     <div>
-                        <label htmlFor="first_name">First Name</label>
+                        <label htmlFor="first_name">First Name: </label>
                         <input
                             type="text"
                             name="first_name"
@@ -46,7 +46,7 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="last_name">Last Name</label>
+                        <label htmlFor="last_name">Last Name: </label>
                         <input
                             type="text"
                             name="last_name"
@@ -55,7 +55,7 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="email">Email:</label>
+                        <label htmlFor="email">Email: </label>
                         <input
                             type="text"
                             name="email"
@@ -64,7 +64,7 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="mobile">Mobile</label>
+                        <label htmlFor="mobile">Mobile: </label>
                         <input
                             type="number"
                             name="mobile"
@@ -73,7 +73,7 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="work">Work:</label>
+                        <label htmlFor="work">Work: </label>
                         <input
                             type="number"
                             name="work"
@@ -82,7 +82,7 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="home">Home:</label>
+                        <label htmlFor="home">Home: </label>
                         <input
                             type="number"
                             name="home"
@@ -91,16 +91,16 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="fax">Fax:</label>
+                        <label htmlFor="fax">Fax: </label>
                         <input
-                            type="number"
+                            type="tel"
                             name="fax"
                             onChange={this.handleOnChange}
                             value={fax}
                         />
                     </div>
                     <div>
-                        <label htmlFor="home_address">Home Address:</label>
+                        <label htmlFor="home_address">Home Address: </label>
                         <input
                             type="text"
                             name="home_address"
@@ -109,7 +109,7 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="work_address">Work Address:</label>
+                        <label htmlFor="work_address">Work Address: </label>
                         <input
                             type="text"
                             name="work_address"
@@ -118,7 +118,7 @@ class ContactForm extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="img">Profile Picture:</label>
+                        <label htmlFor="img">Profile Picture: </label>
                         <input
                             type="text"
                             name="img"

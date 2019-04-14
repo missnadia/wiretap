@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import App from './containers/App';
-import store from './store.js'
+import store from './store'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import './index.css';
-
 
 ReactDOM.render(
     <Provider store={store}>

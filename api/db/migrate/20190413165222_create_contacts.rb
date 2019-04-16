@@ -10,6 +10,8 @@ class CreateContacts < ActiveRecord::Migration[5.2]
       t.integer :fax
       t.string :home_address
       t.string :work_address
+      t.string :img
+      t.string :wire
       
       t.timestamps null: false
     end

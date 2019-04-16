@@ -16,7 +16,8 @@ Contact.create(
         fax: 1234567890,
         home_address: '123 Land of Oo',
         work_address: '123 Land of Oo',
-        img: 'https://t6.rbxcdn.com/1fe03c714e0d3976e6c1207759e39b90'
+        img: 'https://t6.rbxcdn.com/1fe03c714e0d3976e6c1207759e39b90',
+        wire: "Discuss new hero adventures with Jake"
     },
     {
         first_name: "Jake",
@@ -30,7 +31,8 @@ Contact.create(
         work_address: "Land of Oo",
         created_at: "2019-04-13T19:37:15.448Z",
         updated_at: "2019-04-13T23:45:08.599Z",
-        img: "https://vignette.wikia.nocookie.net/parody/images/f/fb/JakeRJS.png/revision/latest?cb=20141209233937"
+        img: "https://vignette.wikia.nocookie.net/parody/images/f/fb/JakeRJS.png/revision/latest?cb=20141209233937",
+        wire: "Meet Lady Rainicorn to discuss childcare"
     },
     {
         first_name: "Princess Bonnibel",
@@ -44,6 +46,7 @@ Contact.create(
         work_address: "The Candy Castle",
         created_at: "2019-04-13T23:19:30.019Z",
         updated_at: "2019-04-13T23:28:03.584Z",
-        img: "https://banner2.kisspng.com/20180424/vgq/kisspng-princess-bubblegum-marceline-the-vampire-queen-fin-love-for-all-seasons-5adff241c52394.0726832015246259858075.jpg"
+        img: "https://banner2.kisspng.com/20180424/vgq/kisspng-princess-bubblegum-marceline-the-vampire-queen-fin-love-for-all-seasons-5adff241c52394.0726832015246259858075.jpg",
+        wire: "Eat lunch with Marceline"
     }]
 )

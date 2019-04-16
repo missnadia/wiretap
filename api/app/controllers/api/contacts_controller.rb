@@ -51,7 +51,8 @@ class Api::ContactsController < ApplicationController
             :fax,
             :home_address,
             :work_address,
-            :img
+            :img,
+            :wire
         )
     end
 end

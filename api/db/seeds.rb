@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Contact.create(
-    {
+    [{
         first_name: 'Finn',
         last_name: 'Mertens',
         email: 'finn.mertens@at.com',
@@ -45,5 +45,5 @@ Contact.create(
         created_at: "2019-04-13T23:19:30.019Z",
         updated_at: "2019-04-13T23:28:03.584Z",
         img: "https://banner2.kisspng.com/20180424/vgq/kisspng-princess-bubblegum-marceline-the-vampire-queen-fin-love-for-all-seasons-5adff241c52394.0726832015246259858075.jpg"
-    }
+    }]
 )

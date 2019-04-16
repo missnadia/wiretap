@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getContacts } from '../actions/contacts'
 import ContactCard from '../components/ContactCard'
+import ContactInfo from '../components/ContactInfo'
 import './Contacts.css'
 
 class Contacts extends Component {
@@ -15,20 +16,28 @@ class Contacts extends Component {
             <div className="ContactsContainer">
                 <h1>Contacts</h1>
                 {this.props.contacts.map(contact =>
-                    <ContactCard
-                        key={contact.id}
-                        contact={contact}
-                    />
+                    <React.Fragment>
+                        <ContactCard
+                            key={contact.id}
+                            contact={contact}
+                            deleteContact={this.props.deleteContact}
+                        />
+                        <ContactInfo
+                            key={contact.id}
+                            contact={contact}
+                            deleteContact={this.props.deleteContact}
+                        />
+                    </React.Fragment>
                 )}
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return ({
         contacts: state.contacts
     })
 }
 
-export default connect(mapStateToProps, { getContacts })(Contacts)
+export default connect(mapStateToProps, { getContacts, deleteContact })(Contacts)

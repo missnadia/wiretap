@@ -28,7 +28,7 @@ class Api::ContactsController < ApplicationController
 
     def destroy
         if @contact.destroy
-            render json: { message: "Successfully destroyed" }, status: 204
+            render json: { id: @contact.id }
         else
             render json: { message: 'Unable to delete contact' }, status: 400
         end
@@ -41,7 +41,7 @@ class Api::ContactsController < ApplicationController
     end
 
     def contact_params
-        params.permit(
+        params.require(:contact).permit(
             :first_name,
             :last_name,
             :email,

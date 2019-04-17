@@ -11,6 +11,7 @@ class Contacts extends Component {
     }
 
     render() {
+
         return (
             <div className="ContactsContainer">
                 <h1>Contacts</h1>
@@ -22,7 +23,6 @@ class Contacts extends Component {
                     />
                 )}
             </div>
-
         )
     }
 }

@@ -61,12 +61,8 @@ export const deleteContact = id => {
             },
             body: JSON.stringify({ id: id })
         })
-            .then(response => {
-                return response.json()
-            })
-            .then(({ id }) => {
-                dispatch(removeContact(id))
-            })
+            .then(response => response.json())
+            .then(({ id }) => dispatch(removeContact(id)))
             .catch(error => console.log(error))
     }
 }

@@ -1,6 +1,6 @@
 # wiretap
 
-wiretap is a React-Redux application that allows users to create contact cards that can store time-stamped notes. These notes can then be used to generate a conversation timeline. This application uses a React-Redux frontend with a Rails API backend.
+wiretap is a React-Redux application that allows users to create contact cards. This application uses a React-Redux frontend with a Rails API backend.
 
 ## Setup
 
@@ -10,6 +10,10 @@ Clone:
 
 Install Required Dependencies and Start Local Server:
 
+API:
+`bundle exec rails s -p 3001`
+
+CLIENT:
 `npm install && npm start`
 
 ## Contributing

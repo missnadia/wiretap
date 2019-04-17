@@ -6,6 +6,9 @@ export default (state = [], action) => {
         case 'CREATE_CONTACT':
             return state.concat(action.contact)
 
+        case 'DELETE_CONTACT':
+            return state.filter(({ id }) => id !== action.data);
+
         default:
             return state
     }

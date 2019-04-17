@@ -1,18 +1,28 @@
 import React from 'react'
+import ContactPicture from './ContactPicture'
+import ContactInfo from './ContactInfo'
 
-const ContactCard = ({ contact }) => (
-    <div className="ContactCard">
-        <div className="ContactCardImg">
-            <img
-                src={contact.img}
-                alt={contact.name}
-            />
+const ContactCard = ({ contact, deleteContact }) => {
+
+    return (
+        <div className="ContactCard">
+            <div>
+                <button
+                    className="DeleteButton"
+                    onClick={() => deleteContact(contact.id)}
+                >Delete {contact.first_name}
+                </button>
+            </div>
+            <div>
+                <ContactPicture
+                    contact={contact}
+                />
+                <ContactInfo
+                    contact={contact}
+                />
+            </div>
         </div>
-        <h3 className="ContactName">{contact.first_name} {contact.last_name}</h3>
-        <button className="DeleteButton">Delete Contact</button>
-    </div>
-
-
-)
+    )
+}
 
 export default ContactCard

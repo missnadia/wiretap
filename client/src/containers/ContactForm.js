@@ -40,8 +40,8 @@ class ContactForm extends Component {
                         <label htmlFor="first_name">First Name: </label>
                         <input
                             type="text"
-                            name="first_name"
                             onChange={this.handleOnChange}
+                            name="first_name"
                             value={first_name}
                         />
                     </div>
@@ -49,8 +49,8 @@ class ContactForm extends Component {
                         <label htmlFor="last_name">Last Name: </label>
                         <input
                             type="text"
-                            name="last_name"
                             onChange={this.handleOnChange}
+                            name="last_name"
                             value={last_name}
                         />
                     </div>
@@ -58,8 +58,8 @@ class ContactForm extends Component {
                         <label htmlFor="email">Email: </label>
                         <input
                             type="text"
-                            name="email"
                             onChange={this.handleOnChange}
+                            name="email"
                             value={email}
                         />
                     </div>
@@ -67,8 +67,8 @@ class ContactForm extends Component {
                         <label htmlFor="mobile">Mobile: </label>
                         <input
                             type="number"
-                            name="mobile"
                             onChange={this.handleOnChange}
+                            name="mobile"
                             value={mobile}
                         />
                     </div>
@@ -76,8 +76,8 @@ class ContactForm extends Component {
                         <label htmlFor="work">Work: </label>
                         <input
                             type="number"
-                            name="work"
                             onChange={this.handleOnChange}
+                            name="work"
                             value={work}
                         />
                     </div>
@@ -85,8 +85,8 @@ class ContactForm extends Component {
                         <label htmlFor="home">Home: </label>
                         <input
                             type="number"
-                            name="home"
                             onChange={this.handleOnChange}
+                            name="home"
                             value={home}
                         />
                     </div>
@@ -94,8 +94,8 @@ class ContactForm extends Component {
                         <label htmlFor="fax">Fax: </label>
                         <input
                             type="tel"
-                            name="fax"
                             onChange={this.handleOnChange}
+                            name="fax"
                             value={fax}
                         />
                     </div>
@@ -103,8 +103,8 @@ class ContactForm extends Component {
                         <label htmlFor="home_address">Home Address: </label>
                         <input
                             type="text"
-                            name="home_address"
                             onChange={this.handleOnChange}
+                            name="home_address"
                             value={home_address}
                         />
                     </div>
@@ -112,8 +112,8 @@ class ContactForm extends Component {
                         <label htmlFor="work_address">Work Address: </label>
                         <input
                             type="text"
-                            name="work_address"
                             onChange={this.handleOnChange}
+                            name="work_address"
                             value={work_address}
                         />
                     </div>
@@ -121,8 +121,8 @@ class ContactForm extends Component {
                         <label htmlFor="img">Profile Picture: </label>
                         <input
                             type="text"
-                            name="img"
                             onChange={this.handleOnChange}
+                            name="img"
                             value={img}
                         />
                     </div>
@@ -136,9 +136,9 @@ class ContactForm extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return ({
+    return {
         contactFormData: state.contactFormData
-    })
+    }
 }
 
 export default connect(mapStateToProps, { updateContactFormData, createContact })(ContactForm)

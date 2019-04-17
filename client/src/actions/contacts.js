@@ -17,6 +17,13 @@ const addContact = contact => {
     }
 }
 
+const removeContact = id => {
+    return {
+        type: 'DELETE_CONTACT',
+        id
+    }
+}
+
 // Async Actions
 export const getContacts = () => {
     return dispatch => {
@@ -40,6 +47,25 @@ export const createContact = contact => {
             .then(contact => {
                 dispatch(addContact(contact))
                 dispatch(resetContactForm())
+            })
+            .catch(error => console.log(error))
+    }
+}
+
+export const deleteContact = id => {
+    return dispatch => {
+        return fetch(`${API_URL}/${id}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: id })
+        })
+            .then(response => {
+                return response.json()
+            })
+            .then(({ id }) => {
+                dispatch(removeContact(id))
             })
             .catch(error => console.log(error))
     }

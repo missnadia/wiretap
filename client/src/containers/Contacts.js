@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getContacts } from '../actions/contacts'
+import { getContacts, deleteContact } from '../actions/contacts'
 import ContactCard from '../components/ContactCard'
-import ContactInfo from '../components/ContactInfo'
 import './Contacts.css'
 
 class Contacts extends Component {
@@ -16,20 +15,14 @@ class Contacts extends Component {
             <div className="ContactsContainer">
                 <h1>Contacts</h1>
                 {this.props.contacts.map(contact =>
-                    <React.Fragment>
-                        <ContactCard
-                            key={contact.id}
-                            contact={contact}
-                            deleteContact={this.props.deleteContact}
-                        />
-                        <ContactInfo
-                            key={contact.id}
-                            contact={contact}
-                            deleteContact={this.props.deleteContact}
-                        />
-                    </React.Fragment>
+                    <ContactCard
+                        key={contact.id}
+                        contact={contact}
+                        deleteContact={this.props.deleteContact}
+                    />
                 )}
             </div>
+
         )
     }
 }

@@ -3,14 +3,14 @@ import '../containers/Contacts.css'
 
 const ContactInfo = ({ contact }) => (
     <div className="ContactInfo">
-        <p>{contact.email}</p>
-        <p>{contact.mobile}</p>
-        <p>{contact.work}</p>
-        <p>{contact.home}</p>
-        <p>{contact.fax}</p>
-        <p>{contact.home_address}</p>
-        <p>{contact.work_address}</p>
-        <p>{contact.wire}</p>
+        <p><strong>Email: </strong>{contact.email}</p>
+        <p><strong>Mobile: </strong>{contact.mobile}</p>
+        <p><strong>Work: </strong>{contact.work}</p>
+        <p><strong>Home: </strong>{contact.home}</p>
+        <p><strong>Fax: </strong>{contact.fax}</p>
+        <p><strong>Home Address: </strong>{contact.home_address}</p>
+        <p><strong>Work Address: </strong>{contact.work_address}</p>
+        <p><strong>Wire: </strong>{contact.wire}</p>
     </div>
 )
 

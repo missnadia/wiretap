@@ -8,7 +8,7 @@ body {
     padding: 16px
 }
 
-.ContactCard {
+.ContactPicture {
     float: left;
     margin: 20px 20px auto;
     width: 200px;
@@ -29,13 +29,13 @@ h3.ContactName {
     text-shadow: white 0px 0px 10px;
 }
 
-.ContactCardImg {
+.ContactPictureImg {
     width: inherit;
     height: inherit;
     border-radius: 40px;
 }
 
-.ContactCardImg img {
+.ContactPictureImg img {
     width: inherit;
     height: inherit;
     border-radius: 40px;

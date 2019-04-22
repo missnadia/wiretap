@@ -9,7 +9,7 @@ import contactFormData from './reducers/contactFormData'
 
 const reducers = combineReducers({
     contacts,
-    contactFormData,
+    contactFormData
 })
 
 const middleware = [thunk]

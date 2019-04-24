@@ -6,11 +6,27 @@ import './Contacts.css'
 
 class Contacts extends Component {
 
+    // constructor() {
+    //     super()
+
+    //     this.state = {
+    //         count: 0
+    //     }
+    // }
+
+    // increaseCount = () => {
+    //     this.setState({
+    //         count: this.state.count + 1
+    //     })
+    // }
+
     componentDidMount() {
         this.props.getContacts()
     }
 
     render() {
+
+        // const count = this.state.count
 
         return (
             <div className="ContactsContainer">
@@ -34,3 +50,11 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { getContacts, deleteContact })(Contacts)
+
+/* <React.Fragment key={contact.id} >
+                        <button
+                            className="DeleteButton"
+                            onClick={this.increaseCount}
+                        >Like {count}
+                        </button> */
+/* </React.Fragment> */
